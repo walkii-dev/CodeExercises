@@ -40,7 +40,7 @@ public class CodeExercisesApplication {
 //        } catch (IOException e) {
 //            throw new RuntimeException(e);
 //        }
-
+/*
         Operacao multiplicacao = (a, b) -> a*b;
         System.out.println(multiplicacao.executar(2,4));
 
@@ -55,20 +55,25 @@ public class CodeExercisesApplication {
         };
         System.out.println(primo.verificar(83));
 
+ */
+/*
         Conversao maiuscular = (str) -> str.toUpperCase();
 
         System.out.println(maiuscular.maiuscular("oh bolas!"));
 
-        Verificacao2 verificacao = (a) -> {
-            boolean  verificarPalindromo(String a){
-                StringBuilder sb  = new StringBuilder();
 
-                sb.append(a);
-                if (a.reverse() == a)
-            }
-        }
+        Verificacao2 verificacao = (a) -> {
+            StringBuilder sb = new StringBuilder();
+            sb.append(a);
+            sb.reverse();
+            return a.contentEquals(sb);
+        };
+
+        System.out.println(verificacao.verificarPalindromo("ovo"));
+ */
+
+
+
 
     }
-
-
 }

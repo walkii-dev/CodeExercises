@@ -23,23 +23,26 @@ public class CodeExercisesApplication {
 //			System.out.print(i+" ");
 //		}
 
-        Tarefa tarefa = new Tarefa("acordar", true, "eu mesmo");
+//        Tarefa tarefa = new Tarefa("acordar", true, "eu mesmo");
+//
+//        ObjectMapper mapper = new ObjectMapper();
+//
+//        try {
+//            mapper.writeValue(new File("tarefa.json"), tarefa);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//
+//        try {
+//            Tarefa tarefa2 = mapper.readValue(new File("tarefa.json"), Tarefa.class);
+//            System.out.println(tarefa2);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
 
-        ObjectMapper mapper = new ObjectMapper();
-
-        try {
-            mapper.writeValue(new File("tarefa.json"), tarefa);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
 
-        try {
-            Tarefa tarefa2 = mapper.readValue(new File("tarefa.json"), Tarefa.class);
-            System.out.println(tarefa2);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
 
     }

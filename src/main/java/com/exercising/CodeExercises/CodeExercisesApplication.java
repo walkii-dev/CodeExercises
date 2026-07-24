@@ -41,9 +41,32 @@ public class CodeExercisesApplication {
 //            throw new RuntimeException(e);
 //        }
 
+        Operacao multiplicacao = (a, b) -> a*b;
+        System.out.println(multiplicacao.executar(2,4));
 
+        Verificacao primo = (a) -> {
+            for(int i = 2;i < a;i++){
+                if(a % i == 0){
+                return false;
+                }
+            }
 
+            return a > 1;
+        };
+        System.out.println(primo.verificar(83));
 
+        Conversao maiuscular = (str) -> str.toUpperCase();
+
+        System.out.println(maiuscular.maiuscular("oh bolas!"));
+
+        Verificacao2 verificacao = (a) -> {
+            boolean  verificarPalindromo(String a){
+                StringBuilder sb  = new StringBuilder();
+
+                sb.append(a);
+                if (a.reverse() == a)
+            }
+        }
 
     }
 

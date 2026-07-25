@@ -113,15 +113,55 @@ Divisao divisao = (a,b) -> {
         List<String> palavras2 = Arrays.asList("apple", "banana", "apple", "orange", "banana");
         System.out.println(palavras2.stream().collect(Collectors.toSet()));
         */
-
+/*
         List<List<Integer>> listaDeNumeros = Arrays.asList(
                 Arrays.asList(1, 2, 3, 4),
                 Arrays.asList(5, 6, 7, 8),
                 Arrays.asList(9, 10, 11, 12)
         );
 
+        List<Integer> listaPrimos = listaDeNumeros.stream().flatMap(List::stream).toList();
 
+        listaPrimos = listaPrimos.stream().filter(n -> {
+            for(int i = 2;i < n;i++){
+                if(n % i == 0){
+                    return false;
+                }
+            }
+            return n > 1;
+         }).toList();
 
+        System.out.println(listaPrimos);
+*/
+        /*
+        List<Pessoa> pessoas = Arrays.asList(
+                new Pessoa("Alice", 22),
+                new Pessoa("Bob", 17),
+                new Pessoa("Charlie", 19)
+        );
+
+        List<String> nomesPessoas = pessoas.stream().filter(p -> p.idade > 18).map(p -> p.nome).sorted().toList();
+        System.out.println(nomesPessoas);
+         */
+/*
+        List<Produto> produtos = Arrays.asList(
+                new Produto("Smartphone", 800.0, "Eletrônicos"),
+                new Produto("Notebook", 1500.0, "Eletrônicos"),
+                new Produto("Teclado", 200.0, "Eletrônicos"),
+                new Produto("Cadeira", 300.0, "Móveis"),
+                new Produto("Monitor", 900.0, "Eletrônicos"),
+                new Produto("Mesa", 700.0, "Móveis")
+        );
+
+        List<Produto> eletrosBaratos = produtos
+                .stream()
+                .filter( p -> p.getCategoria().equals("Eletrônicos"))
+                .filter(p ->p.getPreco() < 1000 )
+                .sorted(Comparator.comparingDouble(Produto::getPreco))
+                .limit(3)
+                .toList();
+        System.out.println(eletrosBaratos);
+ */
 
     }
 }

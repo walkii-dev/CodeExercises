@@ -181,11 +181,15 @@ Divisao divisao = (a,b) -> {
         Map<String,Long> quantidadePorCategoria = produtos.stream()
                 .collect(Collectors.groupingBy(Produto::getCategoria,mapping(Produto::getCategoria,Collectors.counting())));
         System.out.println(quantidadePorCategoria);
-  */
+
 
         Map<String,Optional<Produto>> maisCaroPorCategoria = produtos.stream()
                 .collect(Collectors.groupingBy(Produto::getCategoria,Collectors.maxBy(Comparator.comparingDouble(Produto::getPreco))));
-        maisCaroPorCategoria.forEach((cat,optPrc)-> optPrc.isPresent(p -> System.out.println()));
+        System.out.println(maisCaroPorCategoria);
+*/
+        Map<String, Double> valorTotalPorCategoria = produtos.stream()
+                .collect(Collectors.groupingBy(Produto::getCategoria,Collectors.summingDouble(Produto::getPreco)));
+        System.out.println(valorTotalPorCategoria);
 
     }
 }
